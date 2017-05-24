@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>RunJS</title>
+	<link id="bootstrap_221" rel="stylesheet" type="text/css" class="library" href="/js/sandbox/bootstrap-2.2.1/css/bootstrap.min.css">
+	<script id="jquery_172" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.7.2.min.js"></script>
+	<script id="bootstrap_221" type="text/javascript" class="library" src="/js/sandbox/bootstrap-2.2.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class = 'container'>
+			<div class = 'row'>
+				<div class = 'span6'>
+				  <h1>电商平台</h1>
+			  </div>
+			  <div class = 'span6'>
+					<form class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="inputUsename">
+								用户名
+							</label>
+							<div class="controls">
+								<input type="text" id="inputUserName" placeholder="Username">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" 	for="inputPassword">
+								密码
+							</label>
+							<div class="controls">
+								<input type="password" id="inputPassword" placeholder="Password">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<button id = 'submitBtn' type="submit" class="btn">登录</button>
+							</div>
+						</div>
+					</form>
+			  </div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+$(function () {
+  $('#submitBtn').click(function () {
+	  var $inputUserName = $('#inputUserName');
+		var $inputPassword = $('#inputPassword');
+		
+		if ($inputUserName.val() && $inputPassword.val()) {
+		  alert('登录成功');
+		} else {
+		  alert('登录失败');
+		}
+		
+		return false;
+	});
+})
+
+
+
+
